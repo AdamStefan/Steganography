@@ -101,12 +101,6 @@ namespace ImageHelpers
             }
 
 
-            // al 6
-            if (byteIndex == 217 && embeddingSecretMessageBitIndex % 8 == 4)
-            {
-            }
-
-
             var correction = 1;
             bool embeddCorrectly;
             MatrixBase<Color> ret;
