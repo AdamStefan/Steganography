@@ -264,6 +264,7 @@ namespace ImageHelpers
         public static ImageCodecInfo GetCodecInfo(string mimeType = "image/jpeg")
         {
             var encoders = ImageCodecInfo.GetImageEncoders();
+
             return encoders.FirstOrDefault(t => t.MimeType == mimeType);
         }        
 
