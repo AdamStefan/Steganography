@@ -7,11 +7,11 @@ using System.Windows;
 // General Information about an assembly is controlled through the following 
 // set of attributes. Change these attribute values to modify the information
 // associated with an assembly.
-[assembly: AssemblyTitle("StenographyTool")]
+[assembly: AssemblyTitle("SteganographyTool")]
 [assembly: AssemblyDescription("")]
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("IBM")]
-[assembly: AssemblyProduct("StenographyTool")]
+[assembly: AssemblyProduct("SteganographyTool")]
 [assembly: AssemblyCopyright("Copyright © IBM 2014")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]

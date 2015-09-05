@@ -6,7 +6,7 @@ using System.Windows.Media.Imaging;
 using ImageHelpers;
 using Microsoft.Win32;
 
-namespace StenographyTool
+namespace SteganographyTool
 {
     /// <summary>
     /// Interaction logic for MainWindow.xaml
