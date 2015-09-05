@@ -1,0 +1,84 @@
+﻿<Window x:Class="StenographyTool.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        WindowState="Maximized"
+        Title="MainWindow" >
+    <Grid>        
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition>                
+            </ColumnDefinition>
+            <ColumnDefinition>
+            </ColumnDefinition>
+        </Grid.ColumnDefinitions>        
+            <GroupBox Header="Encoding ">
+            <Border Grid.Column="0" BorderBrush="Blue" BorderThickness="1">
+                <Grid x:Name="EmbeddingGrid" >
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="Auto"></RowDefinition>
+                        <RowDefinition></RowDefinition>
+                        <RowDefinition Height="Auto"></RowDefinition>
+                        <RowDefinition Height="Auto"></RowDefinition>
+                    </Grid.RowDefinitions>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="Auto">
+                        </ColumnDefinition>
+                        <ColumnDefinition>
+                        </ColumnDefinition>
+                    </Grid.ColumnDefinitions>
+                    <Button x:Name="SelectFileDialog" Click="SelectFileDialogForEncoding_OnClick" Margin="3">Select Image for embedding</Button>
+                    <TextBlock  x:Name="FileNameForEncoding" Margin="10" Grid.Row="0" Grid.Column="1"></TextBlock>                    
+                    <Border Background="Cornsilk" Grid.Row="1" Grid.ColumnSpan="2">
+                        <Image  HorizontalAlignment="Stretch" VerticalAlignment="Stretch" x:Name="EncodingSourceImage" ></Image>
+                    </Border>
+                    <Grid  Grid.Row="2" Margin="3" HorizontalAlignment="Stretch" Grid.ColumnSpan="2">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="Auto"></ColumnDefinition>
+                            <ColumnDefinition></ColumnDefinition>
+                        </Grid.ColumnDefinitions>
+
+                        <TextBlock Grid.Column="0"  Text="Secret message"></TextBlock>
+                        <TextBox Grid.Column="1" x:Name="TxtEncodedSecretMessage" TextWrapping="Wrap" TextChanged="TxtEncodedSecretMessage_OnTextChanged"  AcceptsReturn="True" Height="200"/>
+                    </Grid>
+                    <StackPanel  Grid.Row="3"  Grid.ColumnSpan="2" HorizontalAlignment="Left" Orientation="Horizontal">
+                        <Button x:Name="HideMessage" Click="HideMessage_OnClick" Margin="3">Embed Secret Message</Button>
+                    </StackPanel>
+                </Grid>
+            </Border>
+        </GroupBox>
+        <GroupBox Header="Decoding" Grid.Column="1">
+            <Border  BorderBrush="Blue" BorderThickness="1">
+        <Grid x:Name="DecodingGrid" >
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto"></RowDefinition>
+                <RowDefinition></RowDefinition>
+                <RowDefinition Height="Auto"></RowDefinition>
+                <RowDefinition Height="Auto"></RowDefinition>
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="Auto">
+                </ColumnDefinition>
+                <ColumnDefinition>
+                </ColumnDefinition>
+            </Grid.ColumnDefinitions>
+            <Button x:Name="SelectFileDialogForDecoding" Click="SelectFileDialogForDecoding_OnClick" Margin="3">Select Image for decoding</Button>
+            <TextBlock  x:Name="FileNameForDecoding" Margin="10" Grid.Row="0" Grid.Column="1"></TextBlock>
+            <Border Background="Cornsilk" Grid.Row="1" Grid.ColumnSpan="2">
+                <Image  HorizontalAlignment="Stretch" VerticalAlignment="Stretch" x:Name="DecodingSourceImage" ></Image>
+            </Border>
+                    <Grid Grid.Row="2"  Margin="3" Grid.ColumnSpan="2">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="Auto"></ColumnDefinition>
+                    <ColumnDefinition></ColumnDefinition>
+                </Grid.ColumnDefinitions>
+                <TextBlock Grid.Column="0" Text="Secret message"></TextBlock>
+                <TextBox Grid.Column="1" x:Name="TxtDecodedSecretMessage" TextWrapping="Wrap" IsReadOnly="True"  AcceptsReturn="True" Height="200"/>
+            </Grid>
+            <StackPanel  Grid.Row="3"  Grid.ColumnSpan="2" HorizontalAlignment="Left" Orientation="Horizontal">                
+                <Button  x:Name="GetSecretMessage" Click="GetSecretMessage_OnClick" Margin="3">Get Secret Message</Button>
+            </StackPanel>
+        </Grid>
+        </Border>
+        </GroupBox>
+
+    </Grid>
+</Window>
