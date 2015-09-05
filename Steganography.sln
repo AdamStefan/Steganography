@@ -7,7 +7,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TestApp", "TestApp\TestApp.
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ImageHelpers", "ImageHelpers\ImageHelpers.csproj", "{71F6E0BC-1114-45EC-AD76-43926379B3D2}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SteganographyTool", "StenographyTool\SteganographyTool.csproj", "{5D582E10-1969-4ED8-B454-162B92DFDD6A}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SteganographyTool", "SteganographyTool\SteganographyTool.csproj", "{5D582E10-1969-4ED8-B454-162B92DFDD6A}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
